@@ -1,0 +1,48 @@
+# Data Ingestion API
+
+A simple RESTful API for asynchronous, rate-limited data ingestion with prioritization.
+
+## Endpoints
+
+- `POST /ingest`  
+  Submit a job with a list of IDs and a priority (HIGH, MEDIUM, LOW).  
+  Response: `{ "ingestion_id": "<uuid>" }`
+
+- `GET /status/<ingestion_id>`  
+  Query the status of a previously submitted ingestion job.
+
+## Features
+
+- Processes IDs in batches of 3, max 1 batch every 5 seconds.
+- Respects job priority (`HIGH` > `MEDIUM` > `LOW`).
+- Batch and overall status tracking.
+- Fully async background processing, safe to run with Uvicorn/Gunicorn.
+- No external dependencies except FastAPI and standard lib.
+
+## Setup
+
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+## Testing
+
+```bash
+pytest test_app.py
+```
+
+## Design Choices
+
+- **FastAPI** for async & rapid prototyping.
+- **Threading** for the batch processor, but can be upgraded to Celery.
+- **In-memory store** for demo; swap to Redis/DB for production.
+- **No authentication** as required by the assignment.
+
+## Screenshot
+
+![Test Run](test_screenshot.png)  <!-- Add screenshot after running tests -->
+
+## Hosted Demo
+
+> Your hosted URL here (e.g., https://your-app.onrender.com/)
