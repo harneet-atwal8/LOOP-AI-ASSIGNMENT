@@ -22,5 +22,5 @@ class IngestionStore:
             if ingestion_id in self.store and 0 <= batch_idx < len(self.store[ingestion_id]["batches"]):
                 self.store[ingestion_id]["batches"][batch_idx] = batch_data
 
-# ✅ Singleton instance to be used across the app
+
 ingestion_store = IngestionStore()
