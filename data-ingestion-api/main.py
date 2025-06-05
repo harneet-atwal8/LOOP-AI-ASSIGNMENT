@@ -33,7 +33,9 @@ def start_background_worker():
     processor = BatchProcessor()
     processor.daemon = True
     processor.start()
-
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 @app.post("/ingest")
 def ingest(req: IngestRequest):
     ingestion_id = str(uuid.uuid4())
