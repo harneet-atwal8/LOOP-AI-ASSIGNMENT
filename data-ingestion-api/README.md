@@ -41,7 +41,8 @@ pytest test_app.py
 
 ## Screenshot
 
-![Test Run](test_screenshot.png)  <!-- Add screenshot after running tests -->
+![Screenshot 2025-06-05 124130](https://github.com/user-attachments/assets/3f6e8f0d-057e-48e8-8b74-b46116308bb1)
+![Screenshot 2025-06-05 124121](https://github.com/user-attachments/assets/9b335ed0-76ba-4cf9-a903-b959afa02cff)
 
 ## Hosted Demo
 
