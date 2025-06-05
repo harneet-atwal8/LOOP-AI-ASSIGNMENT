@@ -45,4 +45,4 @@ pytest test_app.py
 
 ## Hosted Demo
 
-> Your hosted URL here (e.g., https://your-app.onrender.com/)
+> Your hosted URL here (e.g., https://loop-ai-assignment-9t3d.onrender.com/)
