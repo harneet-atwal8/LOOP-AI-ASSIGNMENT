@@ -22,7 +22,7 @@ A simple RESTful API for asynchronous, rate-limited data ingestion with prioriti
 ## Setup
 
 ```bash
-pip install -r requirements.txt
+pip install -r data-ingestion-api/requirements.txt
 uvicorn main:app --reload
 ```
 
@@ -43,6 +43,11 @@ pytest test_app.py
 
 ![Screenshot 2025-06-05 124130](https://github.com/user-attachments/assets/3f6e8f0d-057e-48e8-8b74-b46116308bb1)
 ![Screenshot 2025-06-05 124121](https://github.com/user-attachments/assets/9b335ed0-76ba-4cf9-a903-b959afa02cff)
+
+#Frontend has been designed in react 
+![Screenshot 2025-06-05 124519](https://github.com/user-attachments/assets/6d8f9e27-ac96-4dea-80a4-e05a0f60d38d)
+![Screenshot 2025-06-05 124528](https://github.com/user-attachments/assets/3ff7cb0e-d865-4b31-ba2c-d176aace5700)
+
 
 ## Hosted Demo
 
