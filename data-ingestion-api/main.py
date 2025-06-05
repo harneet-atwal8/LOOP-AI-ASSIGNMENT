@@ -42,7 +42,7 @@ def ingest(req: IngestRequest):
     ids = req.ids
     priority = req.priority
 
-    # Split into batches of 3
+    # Spliting into batches of 3
     batches = [ids[i:i+3] for i in range(0, len(ids), 3)]
     batch_entries = []
     now = time.time()
@@ -63,7 +63,7 @@ def get_status(ingestion_id: str):
     data = ingestion_store.get_ingestion(ingestion_id)
     if not data:
         raise HTTPException(status_code=404, detail="Ingestion not found")
-    # Gather batch statuses
+    # Gathering batch statuses
     batch_statuses = [batch["status"] for batch in data["batches"]]
     if all(s == "yet_to_start" for s in batch_statuses):
         overall = "yet_to_start"
